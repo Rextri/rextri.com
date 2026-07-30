@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Automatización Inteligente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,7 +14,6 @@
 
 <nav id="nav">
   <a href="#" class="nav-logo"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 28.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg id="rextri-logo" viewBox="0 0 359.63 64" style="height:40px;width:auto;display:block;">
 <style type="text/css">
 	.st0{fill:#618C2F;}
@@ -77,19 +78,21 @@
 </svg>
 </a>
   <ul class="nav-links">
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#proceso">Proceso</a></li>
-    <li><a href="#porque">Nosotros</a></li>
-    <li><a href="#contacto" class="nav-cta">Agenda una consulta</a></li>
+    <li><a href="#servicios" data-t="nav-servicios" data-en="Services">Servicios</a></li>
+    <li><a href="#proceso" data-t="nav-proceso" data-en="Process">Proceso</a></li>
+    <li><a href="#industrias" data-t="nav-industrias" data-en="Industries">Industrias</a></li>
+    <li><a href="#porque" data-t="nav-nosotros" data-en="About">Nosotros</a></li>
+    <li><a href="#contacto" class="nav-cta" data-t="nav-cta" data-en="Book a call">Agenda una consulta</a></li>
   </ul>
+  <button class="lang-btn" id="lang-btn" onclick="toggleLang()" aria-label="Switch language">ES</button>
 </nav>
 
 <section id="hero">
   <div class="hero-inner">
-    <span class="hero-eyebrow">Automatización Inteligente</span>
+    <span class="hero-eyebrow" data-t="hero-eyebrow" data-en="Intelligent Automation">Automatización Inteligente</span>
     <h1 class="hero-h1">
-      Primero<br>
-      <span class="outline-svg" aria-label="entendemos.">
+      <span data-t="hero-primero" data-en="First">Primero</span><br>
+      <span class="outline-svg-wrap"><span class="outline-svg" aria-label="entendemos.">
         <svg id="draw-svg" viewBox="0 0 782.65 110" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
         <path d="M38.72 97.89999999999999Q27.72 97.89999999999999 19.525 93.82999999999998Q11.33 89.75999999999999 6.82 82.66499999999999Q2.31 75.57 2.31 66.66Q2.31 57.529999999999994 6.765000000000001 50.489999999999995Q11.22 43.449999999999996 18.975 39.489999999999995Q26.73 35.529999999999994 36.410000000000004 35.529999999999994Q45.32 35.529999999999994 52.855000000000004 39.05Q60.39 42.57 64.955 49.5Q69.52 56.43 69.52 66.66Q69.52 67.97999999999999 69.41 69.57499999999999Q69.3 71.17 69.19 72.49H27.39Q30.03 79.53 39.49 79.53Q43.67 79.53 46.365 78.43Q49.06 77.33 52.03 75.13L65.01 88.22Q60.61 92.95 54.175 95.425Q47.74 97.89999999999999 38.72 97.89999999999999ZM26.95 60.5H46.31Q45.54 56.76 42.955 54.614999999999995Q40.37 52.47 36.63 52.47Q32.78 52.47 30.25 54.614999999999995Q27.72 56.76 26.95 60.5Z" class="dp"/>
         <path d="M77.33 96.8V36.629999999999995H100.97999999999999V42.57Q104.5 39.05 109.175 37.28999999999999Q113.85 35.529999999999994 119.13 35.529999999999994Q126.06 35.529999999999994 131.67000000000002 38.334999999999994Q137.28 41.13999999999999 140.52499999999998 47.08Q143.76999999999998 53.019999999999996 143.76999999999998 62.48V96.8H118.91V66.77Q118.91 61.16 116.92999999999999 58.795Q114.94999999999999 56.43 111.53999999999999 56.43Q107.8 56.43 104.995 59.125Q102.19 61.82 102.19 68.53V96.8Z" class="dp"/>
@@ -103,56 +106,79 @@
         <path d="M716.1 97.89999999999999Q708.4000000000001 97.89999999999999 700.9200000000001 96.25Q693.44 94.6 688.82 91.96L695.6400000000001 75.57Q699.9300000000001 78.1 705.595 79.53Q711.2600000000001 80.96 716.6500000000001 80.96Q721.1600000000001 80.96 722.7550000000001 80.19Q724.35 79.42 724.35 78.1Q724.35 76.56 721.7650000000001 76.00999999999999Q719.1800000000001 75.46 715.22 75.02Q711.37 74.58 706.97 73.755Q702.57 72.92999999999999 698.6100000000001 71.115Q694.6500000000001 69.3 692.1750000000001 65.725Q689.7 62.15 689.7 56.099999999999994Q689.7 50.379999999999995 693.1650000000001 45.75999999999999Q696.6300000000001 41.13999999999999 703.5050000000001 38.334999999999994Q710.3800000000001 35.529999999999994 720.5 35.529999999999994Q727.1 35.529999999999994 733.7 36.739999999999995Q740.3000000000001 37.949999999999996 745.0300000000001 40.48L738.21 56.87Q733.59 54.339999999999996 729.135 53.405Q724.6800000000001 52.47 720.83 52.47Q716.1 52.47 714.395 53.349999999999994Q712.69 54.23 712.69 55.33Q712.69 56.87 715.33 57.474999999999994Q717.97 58.08 721.82 58.519999999999996Q725.6700000000001 58.959999999999994 730.07 59.785Q734.47 60.61 738.375 62.535Q742.2800000000001 64.46 744.7550000000001 68.035Q747.23 71.61 747.23 77.55Q747.23 82.94 743.82 87.615Q740.4100000000001 92.28999999999999 733.48 95.095Q726.5500000000001 97.89999999999999 716.1 97.89999999999999Z" class="dp"/>
         <path d="M765.9300000000001 97.89999999999999Q759.77 97.89999999999999 755.59 93.88499999999999Q751.4100000000001 89.87 751.4100000000001 83.6Q751.4100000000001 77.22 755.59 73.37Q759.77 69.52 765.9300000000001 69.52Q772.09 69.52 776.27 73.37Q780.45 77.22 780.45 83.6Q780.45 89.87 776.27 93.88499999999999Q772.09 97.89999999999999 765.9300000000001 97.89999999999999Z" class="dp"/>
         </svg>
-      </span>
-      <span class="accent">Luego construimos.</span>
+      </span><span class="hero-svg-en" aria-hidden="true">understand.</span></span>
+      <span class="accent" data-t="hero-luego" data-en="Then we build.">Luego construimos.</span>
     </h1>
     <div class="hero-services">
-      <span class="hero-pill">Tu negocio en piloto automático</span>
-      <span class="hero-pill">Apps y software a medida</span>
-      <span class="hero-pill">Auditoría UX/UI</span>
+      <span class="hero-pill" data-t="h-pill1" data-en="Your business on autopilot">Tu negocio en piloto automático</span>
+      <span class="hero-pill" data-t="h-pill2" data-en="Custom apps &amp; software">Apps y software a medida</span>
+      <span class="hero-pill" data-t="h-pill3" data-en="UX/UI Audit">Auditoría UX/UI</span>
     </div>
-    <p class="hero-sub">Diagnosticamos los procesos reales de tu organización antes de proponer cualquier solución — software, bots, IA o diseño de experiencias.</p>
+    <p class="hero-sub" data-t="hero-sub" data-en="We diagnose your organization's real processes before proposing any solution — software, bots, AI or experience design.">Diagnosticamos los procesos reales de tu organización antes de proponer cualquier solución — software, bots, IA o diseño de experiencias.</p>
     <div class="hero-actions">
-      <a href="#servicios" class="btn-p">Ver servicios →</a>
-      <a href="#contacto" class="btn-s">Agenda una consulta</a>
+      <a href="#servicios" class="btn-p" data-t="hero-btn1" data-en="See services →">Ver servicios →</a>
+      <a href="#contacto" class="btn-s" data-t="hero-btn2" data-en="Book a call">Agenda una consulta</a>
     </div>
   </div>
   <div class="hero-scroll-hint">
-    <span>Scroll</span>
+    <span data-t="hero-scroll" data-en="Scroll">Scroll</span>
     <div class="scroll-track"></div>
+  </div>
+</section>
+
+<section id="metricas" class="section section--metrics">
+  <div class="inner">
+    <div class="metrics-grid">
+      <div class="metric-item" data-metric>
+        <span class="metric-num" data-t="m-num1" data-en="2 wks.">2 sem.</span>
+        <span class="metric-label" data-t="m1-label" data-en="Average implementation time">Tiempo promedio de implementación</span>
+      </div>
+      <div class="metric-item" data-metric>
+        <span class="metric-num">80%</span>
+        <span class="metric-label" data-t="m2-label" data-en="Less time on repetitive tasks">Menos tiempo en tareas repetitivas</span>
+      </div>
+      <div class="metric-item" data-metric>
+        <span class="metric-num">0</span>
+        <span class="metric-label" data-t="m3-label" data-en="Typing errors after automation">Errores de digitación tras automatizar</span>
+      </div>
+      <div class="metric-item" data-metric>
+        <span class="metric-num">4h</span>
+        <span class="metric-label" data-t="m4-label" data-en="Maximum response time">Tiempo máximo de respuesta</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="servicios" class="section section--dark">
   <div class="inner">
     <div class="head">
-      <span class="s-eyebrow">Servicios</span>
-      <h2 class="s-title">Lo que hacemos</h2>
-      <p class="s-body">Tres servicios, un mismo punto de partida: entender tu negocio antes de proponer cualquier solución.</p>
+      <span class="s-eyebrow" data-t="serv-eye" data-en="Services">Servicios</span>
+      <h2 class="s-title" data-t="serv-title" data-en="What we do">Lo que hacemos</h2>
+      <p class="s-body" data-t="serv-body" data-en="Three services, one starting point: understand your business before proposing any solution.">Tres servicios, un mismo punto de partida: entender tu negocio antes de proponer cualquier solución.</p>
     </div>
     <div class="srv-grid">
       <div class="srv-card">
         <div class="srv-num">01</div>
         <div class="srv-icon">⚡</div>
-        <h3>Tu negocio en piloto automático</h3>
-        <p>Identificamos las tareas repetitivas que consume tiempo de tu equipo y las automatizamos — con software, bots o inteligencia artificial, según lo que tenga sentido para ti.</p>
+        <h3 data-t="s1-title" data-en="Your business on autopilot">Tu negocio en piloto automático</h3>
+        <p data-t="s1-body" data-en="We identify the repetitive tasks consuming your team's time and automate them — with software, bots or AI, whichever makes sense for you.">Identificamos las tareas repetitivas que consume tiempo de tu equipo y las automatizamos — con software, bots o inteligencia artificial, según lo que tenga sentido para ti.</p>
         <div class="srv-tags">
           <span class="srv-tag">Software</span>
           <span class="srv-tag">Bots RPA</span>
-          <span class="srv-tag">Inteligencia Artificial</span>
-          <span class="srv-tag">Integraciones</span>
+          <span class="srv-tag" data-t="tag-ia" data-en="Artificial Intelligence">Inteligencia Artificial</span>
+          <span class="srv-tag" data-t="tag-int" data-en="Integrations">Integraciones</span>
         </div>
         <span class="srv-arrow">→</span>
       </div>
       <div class="srv-card">
         <div class="srv-num">02</div>
         <div class="srv-icon">💻</div>
-        <h3>Apps y software a medida</h3>
-        <p>Construimos el sistema exacto que tu empresa necesita — ni más, ni menos. Desde paneles de gestión internos hasta aplicaciones móviles o web que resuelven un problema real.</p>
+        <h3 data-t="s2-title" data-en="Custom apps &amp; software">Apps y software a medida</h3>
+        <p data-t="s2-body" data-en="We build the exact system your company needs — nothing more, nothing less. From internal dashboards to mobile or web apps that solve a real problem.">Construimos el sistema exacto que tu empresa necesita — ni más, ni menos. Desde paneles de gestión internos hasta aplicaciones móviles o web que resuelven un problema real.</p>
         <div class="srv-tags">
           <span class="srv-tag">Apps web</span>
-          <span class="srv-tag">Apps móviles</span>
-          <span class="srv-tag">Sistemas internos</span>
+          <span class="srv-tag" data-t="tag-mob" data-en="Mobile apps">Apps móviles</span>
+          <span class="srv-tag" data-t="tag-sys" data-en="Internal systems">Sistemas internos</span>
           <span class="srv-tag">Dashboards</span>
         </div>
         <span class="srv-arrow">→</span>
@@ -160,13 +186,13 @@
       <div class="srv-card">
         <div class="srv-num">03</div>
         <div class="srv-icon">🎯</div>
-        <h3>Auditoría UX/UI</h3>
-        <p>Analizamos tus productos digitales y te decimos con precisión qué está frenando a tus usuarios, con un plan claro para solucionarlo.</p>
+        <h3 data-t="s3-title" data-en="UX/UI Audit">Auditoría UX/UI</h3>
+        <p data-t="s3-body" data-en="We analyze your digital products and tell you precisely what is blocking your users, with a clear plan to fix it.">Analizamos tus productos digitales y te decimos con precisión qué está frenando a tus usuarios, con un plan claro para solucionarlo.</p>
         <div class="srv-tags">
-          <span class="srv-tag">Análisis de usabilidad</span>
-          <span class="srv-tag">Rediseño</span>
-          <span class="srv-tag">Flujos de usuario</span>
-          <span class="srv-tag">Prototipado</span>
+          <span class="srv-tag" data-t="tag-usa" data-en="Usability analysis">Análisis de usabilidad</span>
+          <span class="srv-tag" data-t="tag-red" data-en="Redesign">Rediseño</span>
+          <span class="srv-tag" data-t="tag-flu" data-en="User flows">Flujos de usuario</span>
+          <span class="srv-tag" data-t="tag-pro" data-en="Prototyping">Prototipado</span>
         </div>
         <span class="srv-arrow">→</span>
       </div>
@@ -177,32 +203,97 @@
 <section id="proceso" class="section section--deep">
   <div class="inner">
     <div class="head centered">
-      <span class="s-eyebrow">Nuestro proceso</span>
-      <h2 class="s-title">Cómo trabajamos contigo</h2>
-      <p class="s-body">El mismo proceso para los tres servicios. Primero entendemos, luego proponemos, luego construimos.</p>
+      <span class="s-eyebrow" data-t="proc-eye" data-en="Our process">Nuestro proceso</span>
+      <h2 class="s-title" data-t="proc-title" data-en="How we work with you">Cómo trabajamos contigo</h2>
+      <p class="s-body" data-t="proc-body" data-en="The same process for all three services. First we understand, then we propose, then we build.">El mismo proceso para los tres servicios. Primero entendemos, luego proponemos, luego construimos.</p>
     </div>
     <div class="timeline" id="timeline">
       <div class="timeline-track"><div class="timeline-progress" id="tl-progress"></div></div>
-      <div class="t-step"><div class="t-dot" data-dot><span class="t-dot-n">01</span></div><span class="t-tag">Escucha</span><h3>Escucha Profunda</h3><p>Nos sentamos con tu equipo a entender cómo funciona realmente tu negocio — sin asumir nada.</p></div>
-      <div class="t-step"><div class="t-dot" data-dot><span class="t-dot-n">02</span></div><span class="t-tag">Diagnóstico</span><h3>Mapa de Oportunidades</h3><p>Identificamos dónde están los cuellos de botella, ineficiencias y oportunidades reales de mejora.</p></div>
-      <div class="t-step"><div class="t-dot" data-dot><span class="t-dot-n">03</span></div><span class="t-tag">Propuesta</span><h3>Plan a tu medida</h3><p>Un plan claro y escalonado con el servicio que resuelve mejor tu problema y costos transparentes.</p></div>
-      <div class="t-step"><div class="t-dot" data-dot><span class="t-dot-n">04</span></div><span class="t-tag">Entrega</span><h3>Construcción y seguimiento</h3><p>Ejecutamos, entregamos y hacemos seguimiento contigo. No desaparecemos cuando terminamos.</p></div>
+      <div class="t-step"><div class="t-dot" data-dot><span class="t-dot-n">01</span></div><span class="t-tag" data-t="p1-eye" data-en="Listen">Escucha</span><h3 data-t="p1-title" data-en="Deep Listening">Escucha Profunda</h3><p data-t="p1-body" data-en="We sit with your team to understand how your business really works — assuming nothing.">Nos sentamos con tu equipo a entender cómo funciona realmente tu negocio — sin asumir nada.</p></div>
+      <div class="t-step"><div class="t-dot" data-dot><span class="t-dot-n">02</span></div><span class="t-tag" data-t="p2-eye" data-en="Diagnosis">Diagnóstico</span><h3 data-t="p2-title" data-en="Opportunity Map">Mapa de Oportunidades</h3><p data-t="p2-body" data-en="We identify where the bottlenecks, inefficiencies and real improvement opportunities are.">Identificamos dónde están los cuellos de botella, ineficiencias y oportunidades reales de mejora.</p></div>
+      <div class="t-step"><div class="t-dot" data-dot><span class="t-dot-n">03</span></div><span class="t-tag" data-t="p3-eye" data-en="Proposal">Propuesta</span><h3 data-t="p3-title" data-en="Tailored Plan">Plan a tu medida</h3><p data-t="p3-body" data-en="A clear, step-by-step plan with the service that best solves your problem and transparent costs.">Un plan claro y escalonado con el servicio que resuelve mejor tu problema y costos transparentes.</p></div>
+      <div class="t-step"><div class="t-dot" data-dot><span class="t-dot-n">04</span></div><span class="t-tag" data-t="p4-eye" data-en="Delivery">Entrega</span><h3 data-t="p4-title" data-en="Build &amp; follow-up">Construcción y seguimiento</h3><p data-t="p4-body" data-en="We execute, deliver and follow up with you. We don't disappear when we're done.">Ejecutamos, entregamos y hacemos seguimiento contigo. No desaparecemos cuando terminamos.</p></div>
     </div>
   </div>
 </section>
 
-<section id="niveles" class="section section--dark">
+<section id="industrias" class="section section--dark">
   <div class="inner">
     <div class="head">
-      <span class="s-eyebrow">Soluciones</span>
-      <h2 class="s-title">Tu empresa avanza<br>a su propio ritmo</h2>
-      <p class="s-body">Cuatro niveles de automatización. Empezás con lo que tiene sentido hoy y escalás cuando estés listo.</p>
+      <span class="s-eyebrow" data-t="ind-eye" data-en="Industries">Industrias</span>
+      <h2 class="s-title"><span data-t="ind-title1" data-en="Any industry.">Cualquier industria.</span><br><span style="color:var(--green)" data-t="ind-title2" data-en="One team.">Un solo equipo.</span></h2>
+      <p class="s-body" data-t="ind-body" data-en="If your company has repetitive tasks, documents, orders or customers to attend to, we have something that can work for you.">Si en tu empresa hay tareas repetitivas, documentos, pedidos o clientes que atender, tenemos algo que puede trabajar por ti.</p>
     </div>
-    <div class="niv-grid">
-      <div class="niv-cell"><div class="niv-num">Nivel 01</div><div class="niv-icon">⚙️</div><h3>Automatización Básica</h3><p>Elimina lo manual y repetitivo que consume tiempo sin agregar valor.</p><ul class="niv-list"><li>Flujos y aprobaciones</li><li>Formularios inteligentes</li><li>Reportes automáticos</li><li>Notificaciones y alertas</li></ul></div>
-      <div class="niv-cell"><div class="niv-num">Nivel 02</div><div class="niv-icon">💻</div><h3>Software a Medida</h3><p>Sistemas diseñados para tu operación, sin funciones de más.</p><ul class="niv-list"><li>Sistemas de gestión</li><li>Dashboards en vivo</li><li>Portales internos</li><li>Bases de datos propias</li></ul></div>
-      <div class="niv-cell"><div class="niv-num">Nivel 03</div><div class="niv-icon">🤖</div><h3>Bots e Integraciones</h3><p>Conectamos sistemas y creamos bots que trabajan por tu equipo.</p><ul class="niv-list"><li>RPA y automatización robótica</li><li>Bots de atención</li><li>Integración de plataformas</li><li>Extracción de datos</li></ul></div>
-      <div class="niv-cell"><div class="niv-num">Nivel 04</div><div class="niv-icon">🧠</div><h3>Inteligencia Artificial</h3><p>IA que aprende de tu negocio y automatiza decisiones complejas.</p><ul class="niv-list"><li>Asistentes IA propios</li><li>Procesamiento de documentos</li><li>Modelos predictivos</li><li>Análisis de lenguaje natural</li></ul></div>
+    <div class="ind-grid">
+
+      <div class="ind-card">
+        <div class="ind-icon">🏭</div>
+        <h3 data-t="ind1-title" data-en="Manufacturing, Commerce &amp; Logistics">Manufactura, Comercio y Logística</h3>
+        <ul class="ind-list">
+          <li data-t="i1l1" data-en="Stock updates itself and auto-generates purchase orders">Stock que se actualiza solo y genera órdenes de compra automáticas</li>
+          <li data-t="i1l2" data-en="Prices synced across physical store, website and marketplaces">Precios sincronizados entre tienda física, web y marketplaces</li>
+          <li data-t="i1l3" data-en="AI chat that receives orders, creates the order and coordinates dispatch">Chat IA que recibe pedidos, genera la orden y coordina el despacho</li>
+          <li data-t="i1l4" data-en="Automatic customer notifications at every stage of the shipment">Notificaciones al cliente en cada etapa del envío sin intervención humana</li>
+          <li data-t="i1l5" data-en="Production and sales reports sent every night to the owner">Reportes de producción y ventas enviados cada noche al dueño</li>
+        </ul>
+        <div class="ind-tags"><span class="ind-tag" data-t="itag1" data-en="Factories">Fábricas</span><span class="ind-tag" data-t="itag2" data-en="Stores">Tiendas</span><span class="ind-tag" data-t="itag3" data-en="Courier">Courier</span></div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-icon">💼</div>
+        <h3 data-t="ind2-title" data-en="Professional Services">Servicios Profesionales</h3>
+        <ul class="ind-list">
+          <li data-t="i2l1" data-en="PDF invoices read and recorded in the system without manual entry">Facturas PDF leídas y registradas en el sistema sin digitación</li>
+          <li data-t="i2l2" data-en="Compares your bank statement with your records and alerts you to any differences">Compara tu estado de cuenta con tus registros y te avisa si hay diferencias</li>
+          <li data-t="i2l3" data-en="Standard contracts and documents generated from a form in seconds">Contratos y documentos estándar generados desde formulario en segundos</li>
+          <li data-t="i2l4" data-en="Alerts for expiring legal deadlines and outstanding payments">Alertas de vencimiento de plazos legales y pagos por cobrar</li>
+          <li data-t="i2l5" data-en="AI chat that collects client data before the first meeting">Chat IA que recopila datos del cliente antes de la primera reunión</li>
+        </ul>
+        <div class="ind-tags"><span class="ind-tag" data-t="itag4" data-en="Law firms">Estudios jurídicos</span><span class="ind-tag" data-t="itag5" data-en="Accounting">Contabilidad</span><span class="ind-tag" data-t="itag6" data-en="Finance">Finanzas</span></div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-icon">🏥</div>
+        <h3 data-t="ind3-title" data-en="Health &amp; Clinics">Salud y Clínicas</h3>
+        <ul class="ind-list">
+          <li data-t="i3l1" data-en="Appointment reminders via WhatsApp without anyone calling">Recordatorios de citas por WhatsApp sin que nadie llame</li>
+          <li data-t="i3l2" data-en="Patient records filled in from a web form">Fichas de pacientes llenadas desde formulario web</li>
+          <li data-t="i3l3" data-en="AI chat that schedules, reschedules and answers frequent questions 24/7">Chat IA que agenda, reprograma y responde dudas frecuentes 24/7</li>
+          <li data-t="i3l4" data-en="Supply control with automatic restocking alerts">Control de insumos con alertas de reposición automática</li>
+        </ul>
+        <div class="ind-tags"><span class="ind-tag" data-t="itag7" data-en="Clinics">Clínicas</span><span class="ind-tag" data-t="itag8" data-en="Laboratories">Laboratorios</span><span class="ind-tag" data-t="itag9" data-en="Medical centers">Centros médicos</span><span class="ind-tag" data-t="itag10" data-en="Pharmacies">Farmacias</span></div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-icon">🔧</div>
+        <h3 data-t="ind4-title" data-en="Diverse Industries">Industrias Diversas</h3>
+        <ul class="ind-list">
+          <li data-t="i4l1" data-en="Bot that schedules visits, records diagnostics and generates automatic quotes">Bot que agenda visitas, registra diagnósticos y genera presupuestos automáticos</li>
+          <li data-t="i4l2" data-en="AI chat that qualifies leads, schedules visits and generates contracts from templates">Chat IA que califica leads, agenda visitas y genera contratos desde plantilla</li>
+          <li data-t="i4l3" data-en="Automated enrollment, payments and certificates; AI assistant for teachers and staff">Matrícula, cobros y certificados automatizados; asistente IA para docentes y administrativos</li>
+        </ul>
+        <div class="ind-tags"><span class="ind-tag" data-t="itag11" data-en="Tech service">Service técnico</span><span class="ind-tag" data-t="itag12" data-en="Real estate">Inmobiliarias</span><span class="ind-tag" data-t="itag13" data-en="Academies">Academias</span><span class="ind-tag" data-t="itag14" data-en="Restaurants">Restaurantes</span></div>
+      </div>
+
+      <div class="ind-card">
+        <div class="ind-icon">📣</div>
+        <h3 data-t="ind5-title" data-en="Marketing &amp; Advertising">Marketing y Publicidad</h3>
+        <ul class="ind-list">
+          <li data-t="i5l1" data-en="Meta and Google campaign reports generated and sent automatically">Reportes de campañas de Meta y Google generados y enviados solos</li>
+          <li data-t="i5l2" data-en="Trend monitoring software updated by AI in real time">Software de tendencias actualizado por IA en tiempo real</li>
+          <li data-t="i5l3" data-en="AI that suggests concepts, formats and channels based on the current moment">IA que sugiere conceptos, formatos y canales según el momento</li>
+          <li data-t="i5l4" data-en="Chat that qualifies leads and schedules meetings with the sales team">Chat que califica leads y agenda reuniones con el equipo comercial</li>
+        </ul>
+        <div class="ind-tags"><span class="ind-tag" data-t="itag15" data-en="Agencies">Agencias</span><span class="ind-tag" data-t="itag16" data-en="Brands">Marcas</span><span class="ind-tag" data-t="itag17" data-en="E-commerce">E-commerce</span></div>
+      </div>
+
+      <div class="ind-card ind-card--cta">
+        <div class="ind-icon">💬</div>
+        <h3 data-t="ind-cta-h" data-en="Your industry not here?">¿Tu industria no está aquí?</h3>
+        <p class="ind-cta-text" data-t="ind-cta-body" data-en="Almost any process done repetitively today can be automated. Tell us what you do and we&#39;ll show you how.">Casi cualquier proceso que hoy hace una persona de forma repetitiva puede automatizarse. Cuéntanos qué haces y te decimos cómo.</p>
+        <a href="#contacto" class="btn-p" style="margin-top:1.2rem;font-size:0.82rem;padding:0.7rem 1.4rem;" data-t="ind-cta-btn" data-en="Book a free call &rarr;">Agendar consulta gratis →</a>
+      </div>
+
     </div>
   </div>
 </section>
@@ -211,14 +302,14 @@
   <div class="inner">
     <div class="porque-wrap">
       <div>
-        <span class="s-eyebrow">Por qué Rextri</span>
-        <h2 class="s-title">Tecnología<br>con propósito</h2>
-        <p class="s-body">No llegamos con una solución ya definida. Llegamos a escuchar. Solo después de entender tu realidad, te decimos qué tiene sentido construir.</p>
+        <span class="s-eyebrow" data-t="porque-eye" data-en="Why Rextri">Por qué Rextri</span>
+        <h2 class="s-title"><span data-t="porque-t1" data-en="Technology">Tecnología</span><br><span data-t="porque-t2" data-en="with purpose">con propósito</span></h2>
+        <p class="s-body" data-t="porque-body" data-en="We don&#39;t arrive with a predefined solution. We arrive to listen. Only after understanding your reality do we tell you what makes sense to build.">No llegamos con una solución ya definida. Llegamos a escuchar. Solo después de entender tu realidad, te decimos qué tiene sentido construir.</p>
         <div class="pillars">
-          <div class="pillar"><div class="pillar-ico">🔍</div><h4>Primera consulta sin costo</h4><p>Nos reunimos, escuchamos y entendemos tu operación antes de proponer cualquier solución.</p></div>
-          <div class="pillar"><div class="pillar-ico">📐</div><h4>Soluciones a medida</h4><p>Nada genérico. Todo diseñado para cómo opera tu empresa.</p></div>
-          <div class="pillar"><div class="pillar-ico">📊</div><h4>Avance por niveles</h4><p>Empezás con lo que tiene sentido hoy. Escalás cuando estés listo.</p></div>
-          <div class="pillar"><div class="pillar-ico">🤝</div><h4>Acompañamiento real</h4><p>Estamos contigo después de la entrega. Ajustamos según evolucione tu negocio.</p></div>
+          <div class="pillar"><div class="pillar-ico">🔍</div><h4 data-t="p-1-title" data-en="First consultation free">Primera consulta sin costo</h4><p data-t="p-1-body" data-en="We meet, listen and understand your operation before proposing any solution.">Nos reunimos, escuchamos y entendemos tu operación antes de proponer cualquier solución.</p></div>
+          <div class="pillar"><div class="pillar-ico">📐</div><h4 data-t="p-2-title" data-en="Tailored solutions">Soluciones a medida</h4><p data-t="p-2-body" data-en="Nothing generic. Everything designed for how your company operates.">Nada genérico. Todo diseñado para cómo opera tu empresa.</p></div>
+          <div class="pillar"><div class="pillar-ico">📊</div><h4 data-t="p-3-title" data-en="Step-by-step progress">Avance por niveles</h4><p data-t="p-3-body" data-en="You start with what makes sense today. You scale when you&#39;re ready.">Empezás con lo que tiene sentido hoy. Escalás cuando estés listo.</p></div>
+          <div class="pillar"><div class="pillar-ico">🤝</div><h4 data-t="p-4-title" data-en="Real support">Acompañamiento real</h4><p data-t="p-4-body" data-en="We&#39;re with you after delivery. We adjust as your business evolves.">Estamos contigo después de la entrega. Ajustamos según evolucione tu negocio.</p></div>
         </div>
       </div>
       <div class="dino-side" id="dino-side">
@@ -231,7 +322,6 @@
 <section id="cta" class="section">
   <div class="cta-inner">
     <span class="cta-dino"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 28.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg viewBox="0 0 122.99 154.14" style="height:80px;width:auto;display:block;margin:0 auto;">
 <style type="text/css">
 	.st0{fill:#C8D8F0;}
@@ -503,14 +593,14 @@
 </g>
 </svg>
 </span>
-    <h2 class="cta-h2">¿Cuánto tiempo pierdes en tareas<br>que podrían <span>automatizarse?</span></h2>
-    <p class="cta-p">La primera sesión de primera consulta no tiene costo. Conversamos sobre tu negocio, identificamos el servicio que más te conviene y te mostramos un camino claro.</p>
-    <a href="#contacto" class="btn-p" style="font-size:1rem;padding:1rem 2.2rem;">Agenda una consulta →</a>
+    <h2 class="cta-h2" data-t="cta-h2" data-en="How much time do you waste on tasks that could be automated?">¿Cuánto tiempo pierdes en tareas<br>que podrían <span>automatizarse?</span></h2>
+    <p class="cta-p" data-t="cta-p" data-en="The first consultation is free. We talk about your business, identify the best service for you and show you a clear path.">La primera sesión de primera consulta no tiene costo. Conversamos sobre tu negocio, identificamos el servicio que más te conviene y te mostramos un camino claro.</p>
+    <a href="#contacto" class="btn-p" style="font-size:1rem;padding:1rem 2.2rem;" data-t="cta-btn" data-en="Book a call →">Agenda una consulta →</a>
     <div style="height:1.8rem"></div>
     <div class="cta-meta">
-      <span>✓</span> Sin compromiso &nbsp;·&nbsp;
-      <span>✓</span> Sin costo &nbsp;·&nbsp;
-      <span>✓</span> Respondemos en 24h
+      <span>✓</span> <span data-t="cta-m1" data-en="No commitment">Sin compromiso</span> &nbsp;·&nbsp;
+      <span>✓</span> <span data-t="cta-m2" data-en="Free">Sin costo</span> &nbsp;·&nbsp;
+      <span>✓</span> <span data-t="cta-m3" data-en="We respond in 4h">Respondemos en 24h</span>
     </div>
   </div>
 </section>
@@ -522,17 +612,17 @@
 
       <!-- Info lado izquierdo -->
       <div class="contact-info">
-        <span class="s-eyebrow">Contacto</span>
-        <h2 class="s-title">Hablemos de<br>tu <span style="color:var(--green)">negocio</span></h2>
-        <p class="s-body">Cuéntanos qué necesitas. Te respondemos en menos de 24 horas con un plan claro y sin compromiso.</p>
+        <span class="s-eyebrow" data-t="cont-eye" data-en="Contact">Contacto</span>
+        <h2 class="s-title"><span data-t="cont-t1" data-en="Let's talk">Hablemos de</span><br>tu <span style="color:var(--green)" data-t="cont-t2" data-en="business">negocio</span></h2>
+        <p class="s-body" data-t="cont-body" data-en="Tell us what you need. We&#39;ll respond in less than 24 hours with a clear plan and no commitment.">Cuéntanos qué necesitas. Te respondemos en menos de 24 horas con un plan claro y sin compromiso.</p>
 
         <div class="contact-items">
-          <a class="contact-item" href="https://wa.me/51944314125" target="_blank" rel="noopener">
+          <a class="contact-item" href="https://wa.me/51944314125" target="_blank" rel="noopener noreferrer">
             <div class="contact-icon">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.855L.057 23.428a.75.75 0 0 0 .921.921l5.573-1.467A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.726 9.726 0 0 1-4.953-1.354l-.355-.212-3.678.968.984-3.595-.232-.371A9.712 9.712 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
             </div>
             <div>
-              <div class="contact-label">WhatsApp</div>
+              <div class="contact-label" data-t="cl-wp" data-en="WhatsApp">WhatsApp</div>
               <div class="contact-value">+51 944 314 125</div>
             </div>
           </a>
@@ -541,7 +631,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
             </div>
             <div>
-              <div class="contact-label">Correo</div>
+              <div class="contact-label" data-t="cl-mail" data-en="Email">Correo</div>
               <div class="contact-value">consultas@rextri.com</div>
             </div>
           </a>
@@ -550,8 +640,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
-              <div class="contact-label">Empresa</div>
-              <div class="contact-value">Asunción Saldaña segunda entrada<br>Tingo María — Perú</div>
+              <div class="contact-label" data-t="cl-addr" data-en="Office">Empresa</div>
+              <div class="contact-value" data-t="cl-addrval" data-en="Asunción Saldaña segunda entrada<br>Tingo María — Perú">Asunción Saldaña segunda entrada<br>Tingo María — Perú</div>
             </div>
           </div>
         </div>
@@ -561,22 +651,22 @@
       <div class="contact-form-wrap">
         <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
           <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required autocomplete="name">
+            <label for="nombre" data-t="lbl-nombre" data-en="Name">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" data-t="form-nombre-ph" data-en="Your name" data-en="Your name" required autocomplete="name">
           </div>
           <div class="form-group">
-            <label for="celular">Celular / WhatsApp</label>
+            <label for="celular" data-t="lbl-cel" data-en="Phone / WhatsApp">Celular / WhatsApp</label>
             <input type="tel" id="celular" name="celular" placeholder="+51 999 999 999" required autocomplete="tel">
           </div>
           <div class="form-group">
-            <label for="consulta">¿Qué necesitas automatizar o mejorar?</label>
-            <textarea id="consulta" name="consulta" rows="9" placeholder="Cuéntanos brevemente tu situación o el problema que quieres resolver..." required></textarea>
+            <label for="consulta" data-t="lbl-consulta" data-en="What do you need to automate or improve?">¿Qué necesitas automatizar o mejorar?</label>
+            <textarea id="consulta" name="consulta" rows="9" placeholder="Cuéntanos brevemente tu situación o el problema que quieres resolver..." data-t="form-textarea-ph" data-en="Tell us briefly about your situation or the problem you want to solve..." required></textarea>
           </div>
           <button type="submit" class="btn-p form-btn" id="form-btn">
-            <span id="btn-text">Enviar consulta →</span>
+            <span id="btn-text" data-t="form-btn-text" data-en="Send inquiry &rarr;">Enviar consulta →</span>
           </button>
           <div id="form-success" class="form-success" style="display:none">
-            <span>✓</span> ¡Mensaje enviado! Te contactamos en menos de 24h.
+            <span>✓</span> <span data-t="form-ok" data-en="Message sent! We will contact you within 24h.">¡Mensaje enviado! Te contactamos en menos de 24h.</span>
           </div>
         </form>
       </div>
@@ -587,8 +677,7 @@
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand"><?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 28.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <div class="footer-brand"><a href="#" aria-label="Ir al inicio" style="display:inline-flex;align-items:center;text-decoration:none;"><?xml version="1.0" encoding="utf-8"?>
 <svg id="rextri-logo-footer" viewBox="0 0 359.63 64" style="height:28px;width:auto;display:inline-block;vertical-align:middle;margin-right:8px;">
 <style type="text/css">
 	.st0{fill:#618C2F;}
@@ -651,18 +740,56 @@
 	</g>
 </g>
 </svg>
-<span style="vertical-align:middle">© 2025 — Automatización Inteligente</span></div>
+</a><span style="vertical-align:middle" data-t="footer-copy" data-en="© 2026 — Intelligent Automation">© 2026 — Automatización Inteligente</span></div>
     <ul class="footer-nav">
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#proceso">Proceso</a></li>
-      <li><a href="#porque">Nosotros</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#servicios" data-t="foot-serv" data-en="Services">Servicios</a></li>
+      <li><a href="#proceso" data-t="foot-proc" data-en="Process">Proceso</a></li>
+      <li><a href="#industrias" data-t="foot-ind" data-en="Industries">Industrias</a></li>
+      <li><a href="#porque" data-t="foot-nos" data-en="About">Nosotros</a></li>
+      <li><a href="#contacto" data-t="foot-cont" data-en="Contact">Contacto</a></li>
     </ul>
     
   </div>
 </footer>
 
 
+
+
+
+<script>
+var _lang = 'es';
+
+// Save original ES content into data-es on page load
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    if(!el.getAttribute('data-es')){
+      if(el.tagName === 'INPUT' || el.tagName === 'TEXTAREA'){
+        el.setAttribute('data-es', el.placeholder);
+      } else {
+        el.setAttribute('data-es', el.innerHTML);
+      }
+    }
+  });
+});
+
+window.toggleLang = function(){
+  _lang = _lang === 'es' ? 'en' : 'es';
+  document.getElementById('lang-btn').textContent = _lang.toUpperCase();
+  document.documentElement.lang = _lang;
+  document.body.classList.toggle('lang-en', _lang === 'en');
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    var val = el.getAttribute('data-' + _lang);
+    if(!val) return;
+    if(el.tagName === 'INPUT' || el.tagName === 'TEXTAREA'){
+      el.placeholder = val;
+    } else {
+      el.innerHTML = val;
+    }
+  });
+};
+</script>
 <script src="main.js"></script>
+
+
 </body>
 </html>

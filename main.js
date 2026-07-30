@@ -89,7 +89,7 @@ function stagger(sel,delay){
 }
 stagger('.srv-card',90);
 stagger('.t-step',70);
-stagger('.niv-cell',65);
+stagger('.ind-card',55);
 stagger('.pillar',55);
 new IntersectionObserver((e)=>{if(e[0].isIntersecting)document.getElementById('dino-side').classList.add('in');},{threshold:0.15}).observe(document.getElementById('dino-side'));
 
@@ -190,72 +190,100 @@ if(tlP){
   new IntersectionObserver((e)=>{if(e[0].isIntersecting)tick();},{threshold:0.05}).observe(dc);
 })();
 
-/* ── 7. CLICK BURST ── */
+/* ── 7. RIPPLE ── */
 (function(){
   const cv=document.createElement('canvas'),ctx=cv.getContext('2d');
   cv.style.cssText='position:fixed;inset:0;pointer-events:none;z-index:9999;';
   document.body.appendChild(cv);
   function resize(){cv.width=window.innerWidth;cv.height=window.innerHeight;}
   resize();window.addEventListener('resize',resize,{passive:true});
-  const particles=[];
-  class Burst{
+  const ripples=[];
+  class Ripple{
     constructor(x,y){
-      this.x=x;this.y=y;
-      const count=18+Math.floor(Math.random()*10);
-      this.dots=Array.from({length:count},(_,i)=>{
-        const angle=(i/count)*Math.PI*2+Math.random()*0.4;
-        const speed=1.2+Math.random()*2.8;
-        const size=Math.random()*4+1.5;
-        return{x,y,vx:Math.cos(angle)*speed,vy:Math.sin(angle)*speed,r:size,alpha:1,
-          green:Math.random()>0.35,decay:0.018+Math.random()*0.015,gravity:0.06+Math.random()*0.04};
-      });
-      this.ring={r:0,maxR:40+Math.random()*20,alpha:0.6};
+      this.x=x;this.y=y;this.t=0;
+      this.waves=[
+        {r:0,speed:3.2,maxR:80, alpha:0.45,width:1.5},
+        {r:0,speed:2.1,maxR:130,alpha:0.25,width:1.0},
+        {r:0,speed:1.2,maxR:190,alpha:0.12,width:0.6},
+      ];
     }
     update(){
-      this.dots.forEach(d=>{d.x+=d.vx;d.y+=d.vy;d.vy+=d.gravity;d.vx*=0.97;d.alpha=Math.max(0,d.alpha-d.decay);});
-      this.ring.r+=3.5;this.ring.alpha=Math.max(0,this.ring.alpha-0.045);
+      this.t++;
+      this.waves.forEach(w=>{w.r+=w.speed;});
     }
     draw(){
-      if(this.ring.alpha>0){ctx.beginPath();ctx.arc(this.x,this.y,this.ring.r,0,Math.PI*2);ctx.strokeStyle=`rgba(93,198,38,${this.ring.alpha})`;ctx.lineWidth=1.5;ctx.stroke();}
-      this.dots.forEach(d=>{
-        if(d.alpha<=0)return;
-        ctx.fillStyle=d.green?`rgba(93,198,38,${d.alpha})`:`rgba(200,230,255,${d.alpha*0.7})`;
-        ctx.fillRect(d.x-d.r,d.y-d.r,d.r*2,d.r*2);
+      this.waves.forEach(w=>{
+        const progress=w.r/w.maxR;
+        const ease=1-Math.pow(progress,2);
+        const al=w.alpha*ease;
+        if(al<0.005)return;
+        ctx.beginPath();
+        ctx.arc(this.x,this.y,w.r,0,Math.PI*2);
+        ctx.strokeStyle=`rgba(93,198,38,${al})`;
+        ctx.lineWidth=w.width*(1-progress*0.5);
+        ctx.stroke();
       });
     }
-    dead(){return this.dots.every(d=>d.alpha<=0)&&this.ring.alpha<=0;}
+    dead(){return this.waves.every(w=>w.r>=w.maxR);}
   }
   let running=false;
-  let dragging=false,lastPos={x:0,y:0};
   function loop(){
-    if(!particles.length){running=false;return;}
-    running=true;ctx.clearRect(0,0,cv.width,cv.height);
-    for(let i=particles.length-1;i>=0;i--){particles[i].update();particles[i].draw();if(particles[i].dead())particles.splice(i,1);}
+    if(!ripples.length){running=false;return;}
+    ctx.clearRect(0,0,cv.width,cv.height);
+    for(let i=ripples.length-1;i>=0;i--){
+      ripples[i].update();ripples[i].draw();
+      if(ripples[i].dead())ripples.splice(i,1);
+    }
     requestAnimationFrame(loop);
   }
   document.addEventListener('mousedown',(e)=>{
-    dragging=true;particles.push(new Burst(e.clientX,e.clientY));
+    ripples.push(new Ripple(e.clientX,e.clientY));
     if(!running){running=true;requestAnimationFrame(loop);}
   });
-  document.addEventListener('mousemove',(e)=>{
-    lastPos={x:e.clientX,y:e.clientY};
-    if(dragging){particles.push(new Burst(e.clientX,e.clientY));if(!running){running=true;requestAnimationFrame(loop);}}
-  });
-  document.addEventListener('mouseup',()=>{dragging=false;});
 })();
 
 /* ── FORM SUBMIT ── */
+function sanitize(str){
+  return String(str).replace(/[<>"'&]/g,c=>({'<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;','&':'&amp;'}[c]));
+}
 function handleSubmit(e) {
   e.preventDefault();
-  const btn  = document.getElementById('form-btn');
-  const text = document.getElementById('btn-text');
+  const btn     = document.getElementById('form-btn');
+  const text    = document.getElementById('btn-text');
   const success = document.getElementById('form-success');
+  const form    = document.getElementById('contact-form');
+  const nombre  = sanitize(document.getElementById('nombre').value.trim());
+  const celular = sanitize(document.getElementById('celular').value.trim());
+  if(!nombre || nombre.length < 2) return;
+  if(!celular || celular.length < 7) return;
   btn.disabled = true;
   text.textContent = 'Enviando...';
-  // Simulate send (replace with your backend/formspree endpoint)
-  setTimeout(() => {
+  fetch('https://formspree.io/f/xnjeydla', {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(res => {
+    if(!res.ok) throw new Error('send failed');
     btn.style.display = 'none';
     success.style.display = 'flex';
-    document.getElementById('contact-form').reset();
-  }, 1200);
+    form.reset();
+  })
+  .catch(() => {
+    btn.disabled = false;
+    text.textContent = 'Enviar consulta →';
+    alert('No se pudo enviar. Escríbenos por WhatsApp o correo.');
+  });
 }
+/* ── MÉTRICAS ── */
+stagger('[data-metric]', 100);
+
+/* ── SCROLL HINT ── */
+(function(){
+  const hint = document.querySelector('.hero-scroll-hint');
+  if(!hint) return;
+  window.addEventListener('scroll', () => {
+    if(scrollY > 60) hint.classList.add('hidden');
+    else hint.classList.remove('hidden');
+  }, {passive:true});
+})();
