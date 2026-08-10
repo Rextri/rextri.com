@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rextri.com/sitemap.xml
